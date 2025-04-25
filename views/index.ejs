@@ -1,0 +1,21 @@
+<% include ./partials/header.ejs %>
+<title>Login</title>
+<link rel="stylesheet" href="../stylesheets/style.css">
+<div class="login-box">
+  <h2>Login</h2>
+  <form action="/login" method="post">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="submit" value="Login">
+    <p class="py-2 text-sm text-white-600 mb-2">Not a user?</p>
+    <div class="py-2">
+      <a href="/register"
+         class="inline-block w-full sm:w-40 bg-blue-600 text-white px-4 py-2 text-center text-sm sm:text-base rounded hover:bg-blue-700 transition">
+         Register here
+      </a>
+    </div>
+    
+  </form>
+</div>
+<% include ./partials/footer.ejs %>
+  

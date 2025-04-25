@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+  <% if(nav===true){%>
+    <div class="bg-gray-800 text-white p-4 flex justify-between items-center">
+      <div class="text-2xl font-bold">
+        My App
+      </div>
+      <div class="space-x-6">
+        <a href="/feed" class="hover:text-gray-400">Feed</a>
+        <a href="/profile" class="hover:text-gray-400">Profile</a>
+        <a href="/logout" class="hover:text-gray-400">Logout</a>
+      </div>
+    </div>
+    <%}%>
+     
