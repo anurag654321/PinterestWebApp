@@ -17,10 +17,14 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(expressSession({
-  secret: process.env.SESSION_SECRET, // Use the secret from environment variables
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'your-default-secret',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: {
+    secure: false, // set to true if using HTTPS
+    maxAge: 1000 * 60 * 60 * 24 // 1 day
+  }
 }));
 
 app.use(passport.initialize());
